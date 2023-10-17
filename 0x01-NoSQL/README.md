@@ -56,3 +56,30 @@ WriteResult({ "nInserted" : 1 })
 bye
 simontagbor@ubuntu:~/0x01$
 ```
+### [3. All documents](./3-all.py)
+I wrote a script that lists all documents in a collection.
+
+#### Output
+```
+simontagbor@ubuntu:~/0x01$ cat 3-all.py | mongo
+MongoDB shell version v4.2.6
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+{ "_id" : ObjectId("5f1d7a5d9c6a6a2b4b1c371e"), "name" : "Bob" }
+{ "_id" : ObjectId("5f1d7a5d9c6a6a2b4b1c371f"), "name" : "John" }
+{ "_id" : ObjectId("5f1d7a5d9c6a6a2b4b1c3720"), "name" : "Betty" }
+```
+### [4. All matches](./4-match.py)
+I wrote a script that lists all documents with `name="Holberton School"` in a collection.
+
+#### Output
+```
+simontagbor@ubuntu:~/0x01$ cat 4-match.py | mongo
+MongoDB shell version v4.2.6
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+{ "_id" : ObjectId("5a8fad532b69437b63252406"), "name" : "Holberton school" }
+bye
+simontagbor@ubuntu:~/0x01$
+```
+
