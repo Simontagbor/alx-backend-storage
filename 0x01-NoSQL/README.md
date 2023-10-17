@@ -95,3 +95,24 @@ MongoDB server version: 3.6.3
 bye
 simontagbor@ubuntu:~/0x01$
 ```
+
+### [6. Update](./6-update.py)
+I wrote a script that adds a new attribute to a document in a collection.
+
+#### Output
+```
+simontagbor@ubuntu:~/0x01$ cat 6-update.py | mongo
+MongoDB shell version v4.2.6
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+bye
+simontagbor@ubuntu:~/0x01$
+
+simontagbor@ubuntu:~/0x01$ cat 4-match | mongo
+MongoDB shell version v4.2.6
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+{ "_id" : ObjectId("5a8fad532b69437b63252406"), "name" : "Holberton school", "address" : "972 Mission street" }
+bye
+```
