@@ -42,3 +42,17 @@ switched to db my_db
 bye
 simontagbor@ubuntu:~/0x01$
 ```
+
+### [2. Insert document](./2-insert.py)
+I wrote a script that inserts a document in a collection.
+
+#### Output
+```
+simontagbor@ubuntu:~/0x01$ cat 2-insert.py | mongo
+MongoDB shell version v4.2.6
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+WriteResult({ "nInserted" : 1 })
+bye
+simontagbor@ubuntu:~/0x01$
+```

@@ -1,0 +1,4 @@
+// This contains commands to insert a document in a database
+var databaseName = "my_db";
+db = db.getSiblingDB(databaseName);
+db.school.insert({ name: "Holberton school" });
