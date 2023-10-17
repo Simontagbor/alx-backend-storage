@@ -28,3 +28,17 @@ logs         0.005GB
 bye
 simontagbor@ubuntu:~/0x01$
 ```
+
+### [1. Create a database](./1-use_or_create_database.py)
+I wrote a script that creates or uses an existing MongoDB database.
+
+#### Output
+```
+simontagbor@ubuntu:~/0x01$ cat 1-use_or_create_database.py | mongo
+MongoDB shell version v4.2.6
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 3.6.3
+switched to db my_db
+bye
+simontagbor@ubuntu:~/0x01$
+```
