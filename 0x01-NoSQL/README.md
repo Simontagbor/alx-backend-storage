@@ -116,3 +116,24 @@ MongoDB server version: 3.6.3
 { "_id" : ObjectId("5a8fad532b69437b63252406"), "name" : "Holberton school", "address" : "972 Mission street" }
 bye
 ```
+
+### [7. Delete by match](./7-delete.py)
+I wrote a script that deletes all documents with `name="Holberton School"` in a collection.
+
+#### Output
+```
+simontagbor@ubuntu:~/0x01$ cat 7-delete.py | mongo
+MongoDB shell version v4.2.6
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+{ "acknowledged" : true, "deletedCount" : 1 }
+bye
+
+simontagbor@ubuntu:~/0x01$ cat 4-match | mongo
+MongoDB shell version v4.2.6
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+bye
+simontagbor@ubuntu:~/0x01$
+```
+
