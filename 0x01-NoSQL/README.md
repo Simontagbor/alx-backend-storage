@@ -82,4 +82,16 @@ MongoDB server version: 3.6.3
 bye
 simontagbor@ubuntu:~/0x01$
 ```
+### [5. Count](./5-count.py)
+I wrote a script that counts the number of documents in a collection.
 
+#### Output
+```
+simontagbor@ubuntu:~/0x01$ cat 5-count.py | mongo
+MongoDB shell version v4.2.6
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+1
+bye
+simontagbor@ubuntu:~/0x01$
+```
