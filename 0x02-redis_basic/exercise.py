@@ -34,3 +34,10 @@ class Cache:
         """ Store the input data in Redis using the random key """
         self._redis.set(key, data)
         return key
+
+    def get(self, key: str, fn: Optional[Callable] = None) -> bytes:
+        """ Retrieve data from Redis """
+        data = self._redis.get(key)
+        if fn:
+            return fn(data)
+        return data

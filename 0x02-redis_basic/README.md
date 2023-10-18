@@ -38,3 +38,5 @@ simontagbor@ubuntu:~/0x02$ ./main.py
 b'hello'
 simontagbor@ubuntu:~/0x02$
 ```
+### [1. Reading from Redis and recovering original type](./exercise.py)
+I updated the class `Cache` by adding the method `get_str` that takes a `key` string argument and returns the right data.
