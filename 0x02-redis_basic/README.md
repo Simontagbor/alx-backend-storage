@@ -40,3 +40,6 @@ simontagbor@ubuntu:~/0x02$
 ```
 ### [1. Reading from Redis and recovering original type](./exercise.py)
 I updated the class `Cache` by adding the method `get_str` that takes a `key` string argument and returns the right data.
+
+### [2. Incrementing values](./exercise.py)
+I updated the class `Cache` by adding the method `count_calls` that returns the number of times a method is called.

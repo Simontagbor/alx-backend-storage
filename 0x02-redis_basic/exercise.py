@@ -6,6 +6,8 @@ Cache class:
 """
 import uuid
 import redis
+from typing import Optional, Callable
+from functools import wraps
 
 
 class Cache:
@@ -28,16 +30,27 @@ class Cache:
         self._redis = redis.Redis()
         self._redis.flushdb()
 
+    def get(self, key: str, fn: Optional[Callable] = None) -> bytes:
+        """ Get the data from Redis """
+        data = self._redis.get(key)
+        if fn:
+            return fn(data)
+        return data
+
+    def count_calls(method: Callable) -> Callable:
+        """ Count the number of times a method is called """
+        key = method.__qualname__
+        @wraps(method)
+        def wrapper(self, *args, **kwargs):
+            """ Wrapper function """
+            self._redis.incr(key)
+            return method(self, *args, **kwargs)
+        return wrapper
+
+    @count_calls
     def store(self, data: bytes) -> str:
         """ Generate a random key """
         key = str(uuid.uuid4())
         """ Store the input data in Redis using the random key """
         self._redis.set(key, data)
         return key
-
-    def get(self, key: str, fn: Optional[Callable] = None) -> bytes:
-        """ Retrieve data from Redis """
-        data = self._redis.get(key)
-        if fn:
-            return fn(data)
-        return data
