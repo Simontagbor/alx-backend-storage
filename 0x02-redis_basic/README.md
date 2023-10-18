@@ -43,3 +43,10 @@ I updated the class `Cache` by adding the method `get_str` that takes a `key` st
 
 ### [2. Incrementing values](./exercise.py)
 I updated the class `Cache` by adding the method `count_calls` that returns the number of times a method is called.
+
+### [3. Storing lists](./exercise.py)
+I updated the class `Cache` by adding the methods `add` and `get_list` to append strings to a list and return the list of strings stored in a list.
+
+### [4. Retrieving lists](./exercise.py)
+I updated the class `Cache` by adding the methods `get`, `get_int`, and `get_str` to return the list of strings stored in a list.
+
